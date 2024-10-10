@@ -4,13 +4,13 @@ LIB=$(ROOT)/lib
 
 EXE=fig9.12
 
-CC=clang
-CFLAGS=-Wall -I$(INCLUDE) -DMACOS
+CC=gcc
+CFLAGS=-Wall -I$(INCLUDE)  # -DMACOS
 LDFLAGS=-L$(LIB) -lapue
 
 all: $(EXE)
 
 %: %.c
-
+	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
 clean:
 	-rm $(EXE)

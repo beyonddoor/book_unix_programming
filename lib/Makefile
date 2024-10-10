@@ -6,7 +6,8 @@ OBJ=error.o path_alloc.o set_fl.o clr_fl.o open_max.o pr_exit.o pr_mask.o signal
 OUTPUT=libapue.a
 
 CC=gcc
-CFLAGS=-Wall -O3 -I$(INCLUDE) -DMACOS
+CFLAGS=-Wall -O3 -I$(INCLUDE)  # -DMACOS
+CFLAGS=-Wall -O3 -I$(INCLUDE)
 LDFLAGS=-L$(LIB)
 
 $(OUTPUT): $(OBJ)

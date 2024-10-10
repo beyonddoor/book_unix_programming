@@ -46,7 +46,7 @@ void foo_hold(struct foo* fp)  /* add a reference to the object */
 {
     pthread_mutex_lock(&hashlock);
     ++fp->f_count;
-    pthraed_mutex_unlock(&hashlock);
+    pthread_mutex_unlock(&hashlock);
 }
 
 struct foo* foo_find(int id)  /* find an existing object */

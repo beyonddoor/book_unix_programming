@@ -2,16 +2,13 @@ ROOT=..
 INCLUDE=$(ROOT)/include
 LIB=$(ROOT)/lib
 
-EXE=fig10.2 fig10.5 fig10.9 fig10.10 fig10.15 fig10.20 fig10.22 fig10.23 fig10.26 fig10.31
+EXE=fig11.13  fig11.2 fig11.3 fig11.4 fig11.5
 
 CC=gcc
 CFLAGS=-Wall -I$(INCLUDE)  # -DMACOS
 LDFLAGS=-L$(LIB) -lapue
 
 all: $(EXE)
-
-fig10.9: fig10.8.c fig10.9.c
-	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 %: %.c
 	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
